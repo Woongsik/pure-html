@@ -1,6 +1,6 @@
 # Moi
   Hi, I am Woong from South Korea and nice to meet you!
-  I have worked as a Frontend developer for last 4 years and like to develop something with Javascript.
+  I have worked as a Frontend developer for few years and like to develop something with Javascript.
 
   I will have fun and enjoy the course with new skills boost :satisfied:
 
