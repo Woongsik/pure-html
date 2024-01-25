@@ -9,92 +9,99 @@
   </head> 
 
   <body>
-    <header class="header">
-      <h1 class="header_title"><a href="#">Different</a></h1>
-      <nav>
-        <ul role="tree" class="nav_items">
-          <li role="treeitem" class="nav_item">
+    <header class="header display--flex">
+      <h1 class="header__title">
+        <a href="#" class="text-decoration--none color--black">Different</a>
+      </h1>
+      <nav class="header__nav">
+        <ul role="tree" class="header__nav__items list-style--none display--flex">
+          <li role="treeitem" class="header__nav__item">
             <a href="#">Home</a>
           </li>
-          <li role="treeitem" class="nav_item">
-            <a href="#">Product</a>
+          <li role="treeitem" class="header__nav__item">
+            <a href="#">Shop</a>
           </li>
-          <li role="treeitem" class="nav_item">
+          <li role="treeitem" class="header__nav__item">
             <a href="#">Contact</a>
           </li>
-          <li role="treeitem" class="nav_item">
-            <a href="#">SignIn</a>
+          <li role="treeitem" class="header__nav__item">
+            <a href="#">Cart</a>
           </li>
         </ul>
       </nav>
     </header>
     
     <main>
-      <section class="main_header">
-        <h1>Something here</h1>
+      <section class="main__header">
+        <div class="main__header__title">
+          <h1>New season arrivals!</h1>
+        </div>
       </section>
       
-      <section class="main_carousel">
-        <h1 class="main_carousel_title">
-          <q>Something different</q>
-        </h1>
+      <section class="main__carousel display--flex">
+        <section class="main__carousel__content display--flex">
+          <h1>
+            <q>Something different</q>
+          </h1>
+          <div role="button" class="btn btn--black main__carousel__content__button">
+            <a href="#" class="text-decoration--none color--white">Shop</a>
+          </div>
+        </section>
       </section>  
       
-      <section class="main_products">
-        <div>
-          <section class="main_products_group">
+      <section class="main__products display--flex">
+        <section>
+          <section class="main__product">
             <h2>New arrivals</h2>
-            <ul role="tree" class="products">
-              <li role="treeitem" class="product">
+            <ul role="tree" class="main__product__items list-style--none display--flex">
+              <li role="treeitem" class="main__product__item">
                 <a href="#">
                   <img src="./images/sub_1.png"
                         alt="sub_1" />
                 </a>
               </li>
-              <li role="treeitem" class="product">
+              <li role="treeitem" class="main__product__item">
                 <a href="#">
                   <img src="./images/sub_2.jpg"
-                      alt="sub_2" />
+                       alt="sub_2" />
                 </a>
               </li>
-              <li role="treeitem" class="product">
+              <li role="treeitem" class="main__product__item">
                 <a href="#">
                   <img src="./images/sub_3.jpg"
-                      width="100%"
-                      height="auto"
-                      alt="sub_3" />
+                       alt="sub_3" />
                 </a>
               </li>
-              <li role="treeitem" class="product">
+              <li role="treeitem" class="main__product__item">
                 <a href="#">
                   <img src="./images/sub_4.jpg"
-                      width="100%"
-                      height="auto"
-                      alt="sub_4" />
+                       alt="sub_4" />
                 </a>
               </li>
-              <li role="treeitem" class="product show_more">
-                <a href="#"><em>Show more...</em></a>
+              <li role="treeitem" class="main__product__item main__product__item--text border--none display--flex">
+                <a href="#">
+                  <em>Show more...</em>
+                </a>
               </li>
             </ul>
           </section>
 
-          <section class="main_products_group">
+          <section class="main__product">
             <h2>Most popular</h2>
-            <ul role="tree" class="products">
-              <li role="treeitem" class="product">
+            <ul role="tree" class="main__product__items list-style--none display--flex">
+              <li role="treeitem" class="main__product__item">
                 <a href="#">
                   <img src="./images/sub_1.png"
                         alt="sub_1" />
                 </a>
               </li>
-              <li role="treeitem" class="product">
+              <li role="treeitem" class="main__product__item">
                 <a href="#">
                   <img src="./images/sub_2.jpg"
                       alt="sub_2" />
                 </a>
               </li>
-              <li role="treeitem" class="product">
+              <li role="treeitem" class="main__product__item">
                 <a href="#">
                   <img src="./images/sub_3.jpg"
                       width="100%"
@@ -102,7 +109,7 @@
                       alt="sub_3" />
                 </a>
               </li>
-              <li role="treeitem" class="product">
+              <li role="treeitem" class="main__product__item">
                 <a href="#">
                   <img src="./images/sub_4.jpg"
                       width="100%"
@@ -110,65 +117,88 @@
                       alt="sub_4" />
                 </a>
               </li>
-              <li role="treeitem" class="product show_more">
+              <li role="treeitem" class="main__product__item main__product__item--text border--none display--flex">
                 <a href="#"><em>Show more...</em></a>
               </li>
             </ul>
           </section>
 
-          <section class="main_products_group">
+          <section class="main__product">
             <h2>Categories</h2>
-            <ul role="tree" class="products">
-              <li role="treeitem" class="product category_text">
+            <ul role="tree" class="main__product__items list-style--none display--flex">
+              <li role="treeitem" class="main__product__item main__product__item--text display--flex">
                 <a href="#">
                   <h3>Men</h3>
                 </a>
               </li>
-              <li role="treeitem" class="product category_text">
+              <li role="treeitem" class="main__product__item main__product__item--text display--flex">
                 <a href="#">
                   <h3>Women</h3>
                 </a>
               </li>
-              <li role="treeitem" class="product category_text">
+              <li role="treeitem" class="main__product__item main__product__item--text display--flex">
                 <a href="#">
                   <h3>Kids</h3>
                 </a>
               </li>
-              <li role="treeitem" class="product category_text">
+              <li role="treeitem" class="main__product__item main__product__item--text display--flex">
                 <a href="#">
                   <h3>Sales</h3>
                 </a>
               </li>
             </ul>
           </section>
-      </div>
+        </section>
       </section>
 
-
-      <section>
-        <div>
-
-        </div>
-      </section>
-
-      <article class="main_story">
-        <h2>Our stories</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-        <h2>Our values</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-        <h2>Our customers</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </article>
+      <!-- <section class="main__stories display--flex">
+        <section>
+          <section class="main__story">
+            <section class="main__story__picture">
+              <h3>Our picture</h3>  
+            </section>
+            <section class="main__story__title">
+              <h3>Title</h3>  
+            </section>
+            <section class="main__story__content">
+              <article>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </article>  
+            </section>
+          </section>
+  
+          <section class="main__story">
+            <section class="main__story__picture">
+              <h3>Our picture</h3>  
+            </section>
+            <section class="main__story__title">
+              <h3>Title</h3>  
+            </section>
+          </section>
+  
+          <section class="main__story">
+            <section class="main__story__picture">
+              <h3>Our picture</h3>  
+            </section>
+            <section class="main__story__title">
+              <h3>Title</h3>  
+            </section>
+            <section class="main__story__content">
+              <article>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </article>  
+            </section>
+          </section>
+        </section>
+      </section> -->
     </main>
 
     <footer>    
-      <section class="footer">
-        <section class="left_group">
+      <section class="footer display--flex">
+        <section class="footer__store">
           <h3>Our stroes</h3>
-          <ul class="store_group">
-            <li>
+          <ul role="tree" class="footer__store__items list-style--none">
+            <li role="treeitem">
               <a tabindex="0" href="#" aria-label="Helsink store" title="Helsink store">
                 <strong>Helsinki</strong>
                 <address>
@@ -176,7 +206,7 @@
                 </address>
               </a>
             </li>
-            <li>
+            <li role="treeitem">
               <a tabindex="0" href="#" aria-label="Tampere store" title="Tampere store">
                 <strong>Tampere</strong>
                 <address>
@@ -184,7 +214,7 @@
                 </address>
               </a>
             </li>
-            <li>
+            <li role="treeitem">
               <a tabindex="0" href="#" aria-label="Turku store" title="Turku store">
                 <strong>Turku</strong>
                 <address>
@@ -195,43 +225,43 @@
           </ul>
         </section>
 
-        <section class="right_group">
-          <section>
+        <section class="footer__contact">
+          <section class="footer__contact__social">
             <h3>Stay tuned!</h3>
-            <ul class="social_group">
-              <li>
-                <a tabindex="0" href="#" aria-label="Facebook" title="Facebook">
+            <ul role="tree" class="footer__contact__social_items list-style--none display--flex">
+              <li role="treeitem">
+                <a href="#" title="Facebook">
                   Facebook
                 </a>
               </li>
-              <li>
-                <a tabindex="0" href="#" aria-label="Instagram" title="Instagram">
+              <li role="treeitem">
+                <a href="#" title="Instagram">
                   Instagram
                 </a>
               </li>
-              <li>
-                <a tabindex="0" href="#" aria-label="Pinterest" title="Pinterest">
+              <li role="treeitem">
+                <a href="#" title="Pinterest">
                   Pinterest
                 </a>
               </li>
             </ul>
           </section>
 
-          <section class="contact_group_wrapper">
+          <section class="footer__contact__info">
             <h3>Contact us</h3>
-            <ul class="contact_group">
-              <li>
-                <a tabindex="0" href="#" aria-label="Mobile" title="Mobile">
+            <ul class="footer__contact__info__items list-style--none">
+              <li class="treeitem">
+                <a href="#" title="Mobile">
                   +358 40 1234 5678
                 </a>
               </li>
-              <li>
-                <a tabindex="0" href="#" aria-label="Email" title="Email">
+              <li class="treeitem">
+                <a href="#" title="Email">
                   info@different.com
                 </a>
               </li>
-              <li>
-                <a tabindex="0" href="#" aria-label="Chat" title="Chat">
+              <li class="treeitem">
+                <a href="#" title="Chat">
                   Live chat 
                 </a>
               </li>
