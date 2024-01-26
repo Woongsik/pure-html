@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.list-style--none {
+  list-style: none;
+}
+
+.border--none {
+  border: none !important;
+}
+
+.text-decoration--none {
+  text-decoration: none;
+}
+
+.color--black {
+  color: black;
+}
+
+.color--white {
+  color: white;
+}
+
+.display--flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: 1px solid black;
+  padding: 5px 25px;
+  width: fit-content;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn--black {
+  color: white;
+  background-color: black;
+}
+
+.btn--black:hover {
+  color: black;
+  background-color: white;
+}
+
+.header {
+  justify-content: space-between;
+  padding: 20px 10px;
+  background-color: #9d86ba;
+}
+
+.header__nav__item {
+  margin-right: 15px;
+}
+
+.header__nav__item a {
+  text-decoration: none;
+  color: white;
+}
+
+.header__nav__item a:hover {
+  color: black;
+}
+
+@media only screen and (max-width:463px) {
+  .header__nav__item {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width:290px) {
+  .header__nav__list {
+    flex-direction: column;
+  }
+}
+
+.main__header {
+  text-align: center;
+  margin: 20px 10px;
+}
+
+.main__carousel {
+  height: 70vh;
+  min-height: 500px;
+  max-height: 700px;
+  background-image: url("../images/main_1.jpg");
+  background-size: cover;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.main__carousel__content {
+  color: white;
+  margin-left: 15%;
+  margin-top: 15%;
+  font-size: 2rem;
+  flex-direction: column;
+}
+
+.main__carousel__content__button {
+  margin-top: 30px;
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 1024px) { /* ipad pro */
+  .main__carousel__content {
+    font-size: 1.5rem;
+    margin-left: 10%;
+  }
+  
+  .main__carousel__content__button {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) { /* ipad mini */
+  .main__carousel {
+    height: 35vh;
+    min-height: 300px;
+  }
+
+  .main__carousel__content {
+    font-size: 1.2rem;
+    margin-left: 5%;
+  }
+  
+  .main__carousel__content__button {
+    font-size: 1rem;
+  }
+}
+
+/* typing */
+.main__carousel__content h1 {
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  margin: 0;
+  letter-spacing: 2px;
+  animation: typing 3s steps(30, end);
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.main__products {
+  margin: 20px 10px;
+}
+
+.main__product {
+  margin: 30px 0;  
+}
+
+.main__product__list {
+  margin: 10px 0;
+  padding: 0;
+  justify-content: flex-start;
+}
+
+@media only screen and (max-width: 520px) { /* when the products get only one item in a row */
+  .header {
+    justify-content: center;
+  }
+
+  .main__products h2 {
+    text-align: center;
+  }
+  
+  .main__product__list {
+    justify-content: center;
+  }
+}
+
+.main__product__item {
+  width: 19%;
+  min-width: 200px;
+  max-width: 250px;
+  height: 250px;
+  margin-right: 5px;
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+.main__product__item img {
+  height: 100%;
+  width: 100%;
+}
+
+.main__product__item a {
+  text-decoration: none;
+  color: black;
+}
+
+.main__product__item img:hover, .main__product__item a:hover {
+  opacity: 0.7;
+  transform: scale(1.2);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* footer */
+.footer {
+  align-items: flex-start;
+  justify-content: space-around;
+  background-color: #9d86ba;
+  padding: 20px 10px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer__store__list li {
+  margin: 10px 0;
+}
+
+.footer__contact__social__list li {
+  margin: 5px 10px 5px 0;
+}
+
+.footer__contact__info {
+  margin-top: 15px;
+}
+
+.footer__contact__info__list li {
+  margin: 5px 0;
+}
+
+@media only screen and (max-width: 725px) { /* When push the colum */
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer__contact__social__list {
+    justify-content: flex-start;
+  }
+}
