@@ -1,1 +1,228 @@
-// scss code here
+@use "./variables";
+@use "./mixins";
+
+* {
+  @include mixins.global-base(0, 0, border-box);
+}
+
+body {
+  @include mixins.body-base(variables.$base-font-family, variables.$base-font-size, 1px);
+}
+
+.list-style--none {
+  list-style: none;
+}
+
+.border--none {
+  border: none !important;
+}
+
+.text-decoration--none {
+  text-decoration: none;
+}
+
+.color--black {
+  color: variables.$color-black;
+}
+
+.color--white {
+  color: variables.$color-white;
+}
+
+.display--flex {
+  @include mixins.display-style(flex, center, center, wrap);
+}
+
+.btn {
+  @include mixins.btn-base()
+}
+
+.btn--black {
+  @include mixins.btn-style(variables.$color-white, variables.$color-black)
+}
+
+.btn--black:hover {
+  @include mixins.btn-style-on-hover(variables.$color-black, variables.$color-white)
+}
+
+.header {
+  justify-content: space-between;
+  padding: 20px 10px;
+  background-color: variables.$color-main;
+  &__nav {
+    &__item {
+      margin-right: 15px;
+    }
+    &__item a {
+      text-decoration: none;
+      color: variables.$color-white;
+    }
+    &__item a:hover {
+      color: variables.$color-black;
+    }
+  }
+}
+
+.main {
+  &__header {
+    text-align: center;
+    margin: 20px 10px;
+  }
+  
+  &__carousel {
+    @include mixins.carousel(70vh, 500px, 700px, url("../images/main_1.jpg"), cover) {
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+    &__content {
+      color: variables.$color-white;
+      margin-left: 15%;
+      margin-top: 15%;
+      font-size: 2rem;
+      flex-direction: column;
+      & h1 {
+        @include mixins.animation_typing(typing 3s steps(30, end)) 
+      }
+      &__button {
+        margin-top: 30px;
+        font-size: 1.5rem;
+      }
+    }
+  }
+  &__products {
+    margin: 20px 10px;
+  }
+  &__product {
+    margin: 30px 0; 
+    &__list {
+      margin: 10px 0;
+      padding: 0;
+      justify-content: flex-start;
+    }
+    &__item {
+      width: 19%;
+      min-width: 200px;
+      max-width: 250px;
+      height: 250px;
+      margin-right: 5px;
+      border: 1px solid variables.$color-black;
+      overflow: hidden;
+      & img {
+        height: 100%;
+        width: 100%;
+      }
+      & a {
+        text-decoration: none;
+        color: variables.$color-black;
+      }
+      & img:hover, & a:hover {
+        opacity: 0.7;
+        transform: scale(1.2);
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@include mixins.responsive(463px) {
+  .header__nav {
+    &__item {
+      margin-top: 20px;
+    }
+  }
+}
+
+@include mixins.responsive(290px) {
+  .header__nav {
+    &__list {
+      flex-direction: column;
+    }
+  }
+}
+
+@include mixins.responsive(variables.$medium-screen) {
+  .main__carousel__content {
+    font-size: 1.5rem;
+    margin-left: 10%;
+    &__button {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@include mixins.responsive(variables.$small-screen) {
+  .main__carousel {
+    height: 35vh;
+    min-height: 300px;
+    &__content {
+      font-size: 1.2rem;
+      margin-left: 5%;
+    }
+    &__button {
+      font-size: 1rem;
+    }
+  }
+}
+
+/* typing */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@include mixins.responsive(520px) { /* when the products get only one item in a row */
+  .header {
+    justify-content: center;
+  }
+
+  .main {
+    &__products h2 {
+      text-align: center;
+    }   
+    &__product__list {
+      justify-content: center;
+    }
+  }
+}
+
+/* footer */
+.footer {
+  align-items: flex-start;
+  justify-content: space-around;
+  background-color: #9d86ba;
+  padding: 20px 10px;
+  & a {
+    text-decoration: none;
+    color: variables.$color-white;
+  }
+  
+  &__store__list li {
+    margin: 10px 0;
+  }
+  
+  &__contact {
+    &__social__list li {
+      margin: 5px 10px 5px 0;
+    }
+    &__info {
+      margin-top: 15px;
+      &__list li {
+        margin: 5px 0;
+      }
+    }
+  } 
+}
+
+@include mixins.responsive(725px) { /* When push the colum */
+  .footer {
+    flex-direction: column;
+    &__contact__social__list {
+      justify-content: flex-start;
+    }
+  }
+}
