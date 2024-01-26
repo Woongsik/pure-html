@@ -40,6 +40,9 @@ body {
   border: 1px solid black;
   padding: 5px 25px;
   width: fit-content;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
 .btn--black {
@@ -48,7 +51,8 @@ body {
 }
 
 .btn--black:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  color: black;
+  background-color: white;
 }
 
 .header {
@@ -96,13 +100,18 @@ body {
 
 .main__carousel__content__button {
   margin-top: 30px;
+  font-size: 1.3rem;
 }
 
 @media only screen and (max-width: 1200px) {
   .main__carousel__content {
     font-size: 1.5rem;
     margin-left: 10%;
-  }  
+  }
+  
+  .main__carousel__content__button {
+    font-size: 1.1rem;
+  }
 }
 
 @media only screen and (max-width: 768px) { /* ipad mini */
@@ -114,7 +123,11 @@ body {
   .main__carousel__content {
     font-size: 1.2rem;
     margin-left: 5%;
-  } 
+  }
+  
+  .main__carousel__content__button {
+    font-size: 1rem;
+  }
 }
 
 /* typing */
@@ -190,26 +203,6 @@ body {
   transform: scale(1.2);
   font-size: 1.2rem;
   font-weight: bold;
-}
-
-.main__stories {
-  flex-wrap: wrap;
-}
-
-.main__story {
-  display: grid;
-  grid-template-columns: 200px;
-  grid-template-rows: 1fr auto;
-}
-
-.main__story__picture {
-  grid-row: 1 / 2;
-  border: 1px solid black; 
-}
-
-.main__story__title {
-  grid-row: 2 / 3;
-  border: 1px solid black; 
 }
 
 /* footer */
