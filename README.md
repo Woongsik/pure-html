@@ -1,12 +1,10 @@
-# Hello!
-  This project is to create an 1 page e-commerce webiste using pure HTML, CSS and SASS. Fresh reminder about Flexbox, Grid and SASS.
+# Hello, there!
+  This project is to create an single page, e-commerce webiste using pure HTML, CSS and SASS. Fresh reminder about Flexbox, Grid and SASS.
   
-  Check the result here
-  https://master--gleaming-seahorse-7a7a61.netlify.app/
+  Check the result here [Shop different](https://shop-different.netlify.app/)
+  This shows how powerful HTML, CSS itself :) 
 
-  This shows how still powerful HTML, CSS itself :) 
-
-# I learned/refreshed
+### Tech stacks
   1. Git/GitHub
   2. HTML and Accessibility
   3. CSS
